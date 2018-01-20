@@ -48,7 +48,6 @@ namespace Sharpnet
             {
                 sm = sm + (uint)Math.Pow(2, i);
             }
-            
             NetID = ipInt & sm;
             FirstUs = NetID + 1;
             LastUs = (NetID + (~sm)) - 1;
