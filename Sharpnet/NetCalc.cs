@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Net;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
 
 namespace Sharpnet
 {
@@ -29,7 +22,7 @@ namespace Sharpnet
             LastUsable_binTB.Text = null;
             Broadcast_binTB.Text = null;
 
-            int sm_shrt = 0;
+            int sm_shrt;
             uint sm = 0, NetID, FirstUs, LastUs, Broadc;
             
             //Converts IP from string to 32 bit unsigned int and reverses byte order due to endianness
@@ -40,14 +33,10 @@ namespace Sharpnet
 
             //Converts "/XX" SM format to decimal int (sm_shrt) and binary value of SM (sm)
             if (!Int32.TryParse(tbSM.Text.Substring(1), out sm_shrt))
-            {
-                MessageBox.Show("Invalid subnet mask", "Sharpnet - Error",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            for (int i = 32; i >= (32 - sm_shrt) ; i--)
-            {
-                sm = sm + (uint)Math.Pow(2, i);
-            }
+                MessageBox.Show("Invalid subnet mask", "Sharpnet - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            for (int i = 32; i >= (32 - sm_shrt); i--) sm = sm + (uint) Math.Pow(2, i);
+            
             NetID = ipInt & sm;
             FirstUs = NetID + 1;
             LastUs = (NetID + (~sm)) - 1;
@@ -85,8 +74,10 @@ namespace Sharpnet
         {
             byte[] convert = BitConverter.GetBytes(intIPvalue);
             Array.Reverse(convert);
-            return (Convert.ToString(convert[0], 2).PadLeft(8, '0') + "." + Convert.ToString(convert[1], 2).PadLeft(8, '0') + "." 
-                    + Convert.ToString(convert[2], 2).PadLeft(8, '0') + "." + Convert.ToString(convert[3], 2).PadLeft(8, '0'));
+            return (Convert.ToString(convert[0], 2).PadLeft(8, '0') + "." +
+                    Convert.ToString(convert[1], 2).PadLeft(8, '0') + "." 
+                    + Convert.ToString(convert[2], 2).PadLeft(8, '0') + "." +
+                    Convert.ToString(convert[3], 2).PadLeft(8, '0'));
         }
 
         private string UintToDecString(uint intIPvalue)
@@ -99,7 +90,7 @@ namespace Sharpnet
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
     public static class RichTextBoxExtensions
