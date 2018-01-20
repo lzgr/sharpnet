@@ -27,28 +27,19 @@ namespace Sharpnet
             sub_mask.o2 = 0;
             sub_mask.o3 = 0;
             sub_mask.o4 = 0;
+            
             Label labela0 = new Label();
             labela0.Text = Iptotext(0, sub_mask);
             labela0.AutoSize = true;
             flowLayoutPanel1.Controls.Add(labela0);
+            
             for (uint i = 1; i <= 32; i++)
             {
-                if (i <= 8)
-                {
-                    sub_mask.o1 = sub_mask.o1 + (int)Math.Pow(2, 8 - i);
-                }
-                else if (i <= 16)
-                {
-                    sub_mask.o2 = sub_mask.o2 + (int)Math.Pow(2, 16 - i);
-                }
-                else if (i <= 24)
-                {
-                    sub_mask.o3 = sub_mask.o3 + (int)Math.Pow(2, 24 - i);
-                }
-                else if (i <= 32)
-                {
-                    sub_mask.o4 = sub_mask.o4 + (int)Math.Pow(2, 32 - i);
-                }
+                if (i <= 8) sub_mask.o1 = sub_mask.o1 + (int)Math.Pow(2, 8 - i);
+                else if (i <= 16) sub_mask.o2 = sub_mask.o2 + (int)Math.Pow(2, 16 - i);
+                else if (i <= 24) sub_mask.o3 = sub_mask.o3 + (int)Math.Pow(2, 24 - i);
+                else if (i <= 32) sub_mask.o4 = sub_mask.o4 + (int)Math.Pow(2, 32 - i);
+                
                 Label labela = new Label();
                 labela.Text = Iptotext(i, sub_mask);
                 labela.AutoSize = true;
