@@ -52,5 +52,14 @@ namespace Sharpnet
             routesummar = null;
             Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            NumHosts hostnum = new NumHosts();
+            this.Hide();
+            hostnum.ShowDialog();
+            hostnum = null;
+            Show();
+        }
     }
 }
