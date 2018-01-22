@@ -20,10 +20,8 @@ namespace Sharpnet
         {
             int hosts = 0, i = 0;
             Int32.TryParse(smTb.Text, out hosts);
-            do
-            {
-                i++;
-            } while (((int) Math.Pow(2, i) - 2) < hosts);
+            do i++;
+            while (((int) Math.Pow(2, i) - 2) < hosts);
             sMask.Text = "/" + (32-i).ToString();
         }
 
