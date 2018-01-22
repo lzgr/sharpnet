@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,15 +50,6 @@ namespace Sharpnet
             this.Hide();
             routesummar.ShowDialog();
             routesummar = null;
-            Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            NumHosts hostnum = new NumHosts();
-            this.Hide();
-            hostnum.ShowDialog();
-            hostnum = null;
             Show();
         }
     }

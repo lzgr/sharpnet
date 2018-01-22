@@ -1,4 +1,4 @@
-﻿namespace Sharpnet
+﻿﻿namespace Sharpnet
 {
     partial class Form1
     {
@@ -39,8 +39,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -141,32 +139,11 @@
             this.label6.Text = "Returns a summarized route for multiple IP addresses";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(15, 312);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(191, 42);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "Subnet mask calculator";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(212, 312);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(452, 42);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Calculates required subnet mask for specified number of hosts";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 381);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.button5);
+            this.ClientSize = new System.Drawing.Size(679, 311);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
@@ -197,8 +174,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label7;
     }
 }
 
