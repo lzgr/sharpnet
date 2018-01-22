@@ -36,6 +36,12 @@
     <ApplicationIcon>sharpneticon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>keysn.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -106,6 +112,7 @@
     <EmbeddedResource Include="RouteSummarization.resx">
       <DependentUpon>RouteSummarization.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="keysn.snk" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
