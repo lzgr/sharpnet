@@ -1,5 +1,5 @@
-# sharpnet
-Sharpnet is an IPv4 subnetting assitant, with following features:
+# Sharpnet
+Sharpnet is an IPv4 subnetting assistant, with following features:
 
  * Subnet mask listing in both binary and decimal format
  * Address space network calculator, for calculating the number of available subnetworks and hosts within a network/address space
