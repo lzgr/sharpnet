@@ -31,6 +31,7 @@ namespace Sharpnet
             Button button1 = new Button();
             button1.Text = "Main menu";
             button1.Size = new Size(136, 32);
+            button1.Click += new EventHandler(button1_Click);
             Label desc = new Label();
             desc.AutoSize = true;
             desc.Text = "List of all IPv4 subnet masks";
